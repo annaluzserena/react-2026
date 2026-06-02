@@ -1,0 +1,120 @@
+/* ==============================================
+   Taskify — Estilos Completos
+   Workshop React | Desarrollo de Software 2026
+   ============================================== */
+
+/* --- Reset --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f0f2f5;
+  color: #1a1a2e;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+#root {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ==============================================
+   Header
+   ============================================== */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #2563eb;
+  font-weight: 800;
+}
+
+.header .subtitulo {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+
+.header .contador {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: #475569;
+}
+
+.header .contador strong {
+  color: #2563eb;
+}
+
+/* ==============================================
+   TaskList
+   ============================================== */
+.task-list {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.task-list h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.task-list ul {
+  list-style: none;
+}
+
+.task-list .vacio {
+  text-align: center;
+  color: #94a3b8;
+  padding: 2rem 0;
+  font-style: italic;
+}
+
+/* ==============================================
+   TaskCard
+   ============================================== */
+.task-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  background: #f8fafc;
+  transition: background 0.2s ease;
+}
+
+.task-card:hover {
+  background: #f1f5f9;
+}
+
+.task-card--completada .task-card__titulo {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.task-card__estado {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.task-card__titulo {
+  font-size: 1rem;
+  color: #1e293b;
+  flex: 1;
+}
