@@ -118,3 +118,68 @@ body {
   color: #1e293b;
   flex: 1;
 }
+
+.seccion-tarjeta-personal {
+  padding: 2rem;
+  background: #111827;
+  border-radius: 16px;
+  margin-top: 1em;
+}
+
+.seccion-tarjeta-personal h1 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #e0e0e0;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #2563eb;
+}
+
+.seccion-personas__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.tarjeta-personal {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #1e293b;
+  border: 1px solid #2563eb;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  min-width: 260px;
+  max-width: 340px;
+}
+
+.tarjeta-personal_nombre {
+  font-size: 22px;
+  font-weight: 500;
+  color: #e0e0e0;
+  line-height: 1.2;
+}
+
+.tarjeta-personal_edad {
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+.tarjeta-personal_ciudad {
+  font-size: 14px;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/*
+.tarjeta-personal_ciudad::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6b7280;
+  opacity: 0.5;
+}*/

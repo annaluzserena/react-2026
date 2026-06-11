@@ -1,5 +1,6 @@
-import Header from './components/Header'
-import TaskList from './components/TaskList'
+import Header from "./components/Header";
+import TaskList from "./components/TaskList";
+import TarjetaPersonal from "./components/TarjetaPersonal";
 
 /* =========================================================
    Taskify — App principal (Etapa 1)
@@ -16,11 +17,11 @@ import TaskList from './components/TaskList'
 
 // Datos de ejemplo — simulando tareas de un alumno
 const tareasIniciales = [
-  { id: 1, titulo: 'Aprender JSX', completada: false },
-  { id: 2, titulo: 'Crear mi primer componente', completada: true },
-  { id: 3, titulo: 'Entender las props', completada: false },
-  { id: 4, titulo: 'Practicar composición', completada: false },
-]
+  { id: 1, titulo: "Aprender JSX", completada: false },
+  { id: 2, titulo: "Crear mi primer componente", completada: true },
+  { id: 3, titulo: "Entender las props", completada: false },
+  { id: 4, titulo: "Practicar composición", completada: false },
+];
 
 function App() {
   return (
@@ -28,12 +29,26 @@ function App() {
       <Header
         titulo="Taskify"
         subtitulo="Workshop React — Desarrollo de Software 2026"
-        tareasPendientes={tareasIniciales.filter(t => !t.completada).length}
+        tareasPendientes={tareasIniciales.filter((t) => !t.completada).length}
       />
 
       <TaskList tareas={tareasIniciales} />
+
+      <section className="seccion-tarjeta-personal">
+        <h1>Tarjetas Personales</h1>
+        <div className="seccion-personas__grid">
+          <TarjetaPersonal nombre={"Ana"} edad={35} ciudad={"Castelli"} />
+          <TarjetaPersonal
+            nombre={"Ornela"}
+            edad={22}
+            ciudad={"San Clemente"}
+          />
+          <TarjetaPersonal nombre={"Emma"} edad={96} ciudad={"Chascomus"} />
+          <TarjetaPersonal nombre={"Enrique"} edad={47} ciudad={"Belgrano"} />
+        </div>
+      </section>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
