@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import TaskList from "./components/TaskList";
 import TarjetaPersonal from "./components/TarjetaPersonal";
+import ListaProductos from "./components/ListaProductos";
 
 /* =========================================================
    Taskify — App principal (Etapa 1)
@@ -21,6 +22,17 @@ const tareasIniciales = [
   { id: 2, titulo: "Crear mi primer componente", completada: true },
   { id: 3, titulo: "Entender las props", completada: false },
   { id: 4, titulo: "Practicar composición", completada: false },
+];
+
+const listaProductos = [
+  {id: 1, nombre: "Elden Ring", precio: 85966, disponible: true},
+  {id: 2, nombre: "Cyberpunk 2077", precio: 57306, disponible: true},
+  {id: 3, nombre: "God of War Ragnarök", precio: 100296, disponible: false },
+  {id: 4, nombre: "Red Dead Redemption 2", precio: 42976, disponible: true },
+  {id: 5, nombre: "Starfield", precio: 85966, disponible: true },
+  {id: 6, nombre: "Marvel's Spider-Man 2", precio: 100296, disponible: false },
+  {id: 7, nombre: "Final Fantasy XVI", precio: 64471, disponible: false },
+  {id: 8, nombre: "Resident Evil 4 Remake", precio: 57306, disponible: true }
 ];
 
 function App() {
@@ -47,6 +59,7 @@ function App() {
           <TarjetaPersonal nombre={"Enrique"} edad={47} ciudad={"Belgrano"} />
         </div>
       </section>
+      <ListaProductos productos={listaProductos}/>
     </div>
   );
 }

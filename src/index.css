@@ -3,6 +3,32 @@
    Workshop React | Desarrollo de Software 2026
    ============================================== */
 
+/* =========================================
+   Variables
+   ========================================= */
+:root {
+  --color-bg:           #f5f5f0;
+  --color-surface:      #ffffff;
+  --color-border:       #e8e8e2;
+ 
+  --color-text-primary:   #1a1a1a;
+  --color-text-secondary: #6b6b6b;
+ 
+  --color-accent:         #2d6a4f;
+  --color-accent-light:   #d8f3dc;
+ 
+  --color-danger:         #c0392b;
+  --color-danger-light:   #fdecea;
+ 
+  --font-sans: "Inter", system-ui, sans-serif;
+ 
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  14px;
+ 
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.07), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
 /* --- Reset --- */
 *,
 *::before,
@@ -183,3 +209,126 @@ body {
   background: #6b7280;
   opacity: 0.5;
 }*/
+
+/* =========================================
+   Sección productos
+   ========================================= */
+.lista-productos {
+  max-width: 680px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+  font-family: var(--font-sans);
+}
+ 
+.lista-productos h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1.5px solid var(--color-border);
+}
+ 
+ 
+/* =========================================
+   Lista vacía
+   ========================================= */
+.lista-productos_vacia {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+}
+ 
+ 
+/* =========================================
+   Lista de items
+   ========================================= */
+.lista-productos ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+ 
+ 
+/* =========================================
+   Item individual
+   ========================================= */
+.producto-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+ 
+.producto-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
+}
+ 
+ 
+/* =========================================
+   Nombre del producto
+   ========================================= */
+.producto-item_nombre {
+  flex: 1;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+ 
+ 
+/* =========================================
+   Precio
+   ========================================= */
+.producto-item_precio {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  min-width: 90px;
+  text-align: right;
+}
+ 
+ 
+/* =========================================
+   Badge de disponibilidad
+   ========================================= */
+.producto-item_disponible {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  min-width: 80px;
+  justify-content: center;
+ 
+  /* Estado disponible (cadena vacía = disponible) */
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+}
+ 
+/* Estado agotado — agregar esta clase cuando disponible === false */
+.producto-item_disponible.agotado {
+  background: var(--color-danger-light);
+  color: var(--color-danger);
+}
