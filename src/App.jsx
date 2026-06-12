@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import TaskList from "./components/TaskList";
 import TarjetaPersonal from "./components/TarjetaPersonal";
 import ListaProductos from "./components/ListaProductos";
+import ContadorLimitado from "./components/ContadorLimitado";
 
 /* =========================================================
    Taskify — App principal (Etapa 1)
@@ -60,6 +61,7 @@ function App() {
         </div>
       </section>
       <ListaProductos productos={listaProductos}/>
+      <ContadorLimitado/>
     </div>
   );
 }
